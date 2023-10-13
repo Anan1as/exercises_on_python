@@ -1,12 +1,23 @@
+import random
 
+def generarContraseña(largo):
+    caracteres = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789"
+    contraseña = ""
+
+    for pop in range(largo):
+        contraseña += random.choice(caracteres)
+    
+    return contraseña
+
+cantidadCaracteres = int(input("Ingrese que tan larga quiere que sea su contraseña: "))
+
+if cantidadCaracteres < 1:
+    print("La contraseña debe al menos tener un caracter :/")
+else:
+    contraseñahecha = generarContraseña(cantidadCaracteres)
+    print("Contraseña generada:", contraseñahecha)
 
 '''
-listaNombres = []
-cantidadNombres = int(input("Ingrese la cantidad de nombres: "))
-for cantidadNombre in range(cantidadNombres):
-    nombre=input("Ingrese un nombre: ")
-    listaNombres.append(nombre)
-
 Crea un generador de contraseñas
 #Se deberá solicitar al usuario la cantidad de caracteres que desea que tenga su contraseña.
 #La contraseña debe contener letras y números al azar.
