@@ -1,3 +1,3 @@
-# prueba1
+# Exercises on python
 
 El tiempo se detiene.
